@@ -1,0 +1,489 @@
+<section class="nicdark_section">
+
+    <div class="nicdark_space20"></div>
+
+    <div class="nicdark_container nicdark_clearfix">
+
+        <div class="grid grid_11 nomargin percentage slide animated">
+           <div id="myCarousel" class="carousel" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/slide/img3.jpg" style="height: 500px; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="img/slide/img1.jpg" style="height: 500px; width: 100%;">    
+                        </div>
+                  
+                        <div class="item">
+                            <img src="img/slide/img2.jpg" style="height: 500px; width: 100%;">    
+                        </div>
+
+                        <div class="item">
+                            <img src="img/slide/img6.jpg" style="height: 500px; width: 100%;">    
+                        </div>
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+        </div>
+
+        <article class="grid grid_11 nomargin percentage slides animated" style="display: none;">
+            <canvas id="myCanvas" width="1200" height="490" style="margin-top: 5px;"></canvas>
+        </article>
+
+        <div class="grid grid_1 nomargin percentage tool-bar">
+            <ul>
+                <li><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5"><i class="icon-file-pdf" title="Sửa tài liệu" data-toggle="modal" data-target="#modal_upload"></i></a></li>
+                <li><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5"><i class="icon-help" title="Đặt câu hỏi" data-toggle="modal" data-target="#modal_ques"></i></a></li>
+                <li><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5" href="#/21/homework"><i class="icon-attach-2" data-toggle="tooltip" title="Bài tập về nhà"></i></a></li>
+                <li><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5" href="#/{{class_id}}/lectures"><i class="icon-book" data-toggle="tooltip" title="Xem tài liệu"></i></a></li>
+                <li id="whiteboard"><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5"><i class="icon-pencil-2" data-toggle="tooltip" title="Bảng trắng"></i></a></li>
+                <li id="showslide" style="display: none;"><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5"><i class=" icon-sliders" data-toggle="tooltip" title="Slide"></i></a></li>
+                <li><a class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey nicdark_margin5"><i class="icon-videocam" data-toggle="tooltip" title="Quay bài giảng"></i></a></li>
+            </ul>
+            
+        </div> 
+
+        <div class="nicdark_space50"></div> 
+
+    </div>
+
+    <div class="nicdark_container nicdark_clearfix">
+        <h1 class="subtitle greydark"><i class="icon-help-circled"></i>Câu hỏi</h1>
+        <div class="grid grid_11 nomargin percentage" id="sclass">
+            <div class="">
+                <h5 class="nicdark_toogle_header white nicdark_bg_blue big nicdark_radius nicdark_shadow">
+                    1 + 1 = ?
+                    <a style="float: right;padding: 0px;" class="pub nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey"><i class="icon-cog-2 "></i></a>
+                    <a style="float: right;padding: 0px;" data-toggle="modal" data-target="#modal_result" class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey"><i class="icon-cog-2 "></i></a>
+                </h5>
+                <div class="nicdark_toogle_content nicdark_bg_grey nicdark_radius_bottom nicdark_shadow">
+                    <div class="nicdark_margin100">
+                        <a class="sub nicdark_zoom nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white">A: 1</a>
+                    </div>
+                    <div class="sub nicdark_margin100">
+                        <a class="nicdark_zoom nicdark_btn nicdark_bg_blue medium nicdark_shadow nicdark_radius white">B: 2</a>
+                    </div>
+                    <div class="sub nicdark_margin100">
+                        <a class="nicdark_zoom nicdark_btn nicdark_bg_orange medium nicdark_shadow nicdark_radius white">C: 3</a>
+                    </div>
+                    <div class="sub nicdark_margin100">
+                        <a class="nicdark_zoom nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white">D: 4</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="nicdark_space50"></div>
+    </div>
+            
+</section>
+
+<div id="modal_upload" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sửa tài liệu dạy</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="usr">Tên tài liệu:</label>
+                    <input type="text" class="form-control" id="file_name">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Tài liệu:</label>
+                    <input type="file" class="form-control" id="file_dir">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default">Sửa</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="modal_result" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
+            <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
+                <h4 class="white nicdark_margin20">Kết quả câu hỏi</h4>
+                <i class="icon-text-width nicdark_iconbg right medium yellow"></i>
+            </div>
+            <div class="nicdark_margin20" style="width: 97%;">
+                <div class="nicdark_progressbar nicdark_bg_grey nicdark_radius nicdark_shadow">
+                    <h5 class="nicdark_progressbar_title nicdark_bg_red nicdark_radius nicdark_shadow fade-left animate1" style="width:95%">
+                        <span class="white nicdark_size_big"><i class="icon-puzzle"></i>&nbsp;&nbsp;&nbsp;SCHOOL · 95%</span>
+                    </h5>
+                </div>
+                <div class="nicdark_space20"></div>
+                <div class="nicdark_progressbar nicdark_bg_grey nicdark_radius nicdark_shadow">
+                    <h5 class="nicdark_progressbar_title nicdark_bg_blue nicdark_radius nicdark_shadow fade-left animate1" style="width:95%">
+                        <span class="white nicdark_size_big"><i class="icon-puzzle"></i>&nbsp;&nbsp;&nbsp;SCHOOL · 95%</span>
+                    </h5>
+                </div>
+                <div class="nicdark_space20"></div>
+                <div class="nicdark_progressbar nicdark_bg_grey nicdark_radius nicdark_shadow">
+                    <h5 class="nicdark_progressbar_title nicdark_bg_orange nicdark_radius nicdark_shadow fade-left animate1" style="width:95%">
+                        <span class="white nicdark_size_big"><i class="icon-puzzle"></i>&nbsp;&nbsp;&nbsp;SCHOOL · 95%</span>
+                    </h5>
+                </div>
+                <div class="nicdark_space20"></div>
+                <div class="nicdark_progressbar nicdark_bg_grey nicdark_radius nicdark_shadow">
+                    <h5 class="nicdark_progressbar_title nicdark_bg_yellow nicdark_radius nicdark_shadow fade-left animate1" style="width:95%">
+                        <span class="white nicdark_size_big"><i class="icon-puzzle"></i>&nbsp;&nbsp;&nbsp;SCHOOL · 95%</span>
+                    </h5>
+                </div>                         
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="modal_ques" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sửa tài liệu dạy</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="usr">Câu hỏi:</label>
+                    <input type="text" class="form-control" style="margin-bottom: 10px;">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Phương án:</label>
+                    <input type="text" class="form-control" placeholder="Phương án A" style="margin-bottom: 10px;">
+                    <input type="text" class="form-control" placeholder="Phương án B" style="margin-bottom: 10px;">
+                    <input type="text" class="form-control" placeholder="Phương án C" style="margin-bottom: 10px;">
+                    <input type="text" class="form-control" placeholder="Phương án D" style="margin-bottom: 10px;">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default">Tạo câu hỏi</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!--main-->
+    <script src="js/main/jquery.min.js"></script> <!--Jquery-->
+    <script src="js/main/jquery-ui.js"></script> <!--Jquery UI-->
+    <script src="js/main/excanvas.js"></script> <!--canvas need for ie-->
+    <!--plugins-->
+    <script src="js/plugins/revslider/jquery.themepunch.tools.min.js"></script> <!--revslider-->
+    <script src="js/plugins/revslider/jquery.themepunch.revolution.min.js"></script> <!--revslider-->
+
+    <!--menu-->
+    <script src="js/plugins/menu/superfish.min.js"></script> <!--superfish-->
+    <script src="js/plugins/menu/tinynav.min.js"></script> <!--tinynav-->
+
+    <!--other-->
+    <script src="js/plugins/isotope/isotope.pkgd.min.js"></script> <!--isotope-->
+    <script src="js/plugins/mpopup/jquery.magnific-popup.min.js"></script> <!--mpopup-->
+    <script src="js/plugins/scroolto/scroolto.js"></script> <!--Scrool To-->
+    <script src="js/plugins/nicescrool/jquery.nicescroll.min.js"></script> <!--Nice Scroll-->
+    <script src="js/plugins/inview/jquery.inview.min.js"></script> <!--inview-->
+    <script src="js/plugins/parallax/jquery.parallax-1.1.3.js"></script> <!--parallax-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--settings-->
+    <script src="js/settings.js"></script> <!--settings-->
+    <!--custom js-->
+
+    <script type="text/javascript">
+    	jQuery(document).ready(function() {
+
+
+    		//START SLIDE
+    		jQuery('.nicdark_slide1').show().revolution({
+    			dottedOverlay:"none",
+    			delay:16000,
+    			startwidth:1170,
+    			startheight:500,
+    			hideThumbs:200,
+    			
+    			thumbWidth:100,
+    			thumbHeight:50,
+    			thumbAmount:5,
+    			
+    			navigationType:"none",
+    			navigationArrows:"solo",
+    			navigationStyle:"preview2",
+    			
+    			touchenabled:"on",
+    			onHoverStop:"on",
+    			
+    			swipe_velocity: 0.7,
+    			swipe_min_touches: 1,
+    			swipe_max_touches: 1,
+    			drag_block_vertical: false,
+    									
+    			parallax:"mouse",
+    			parallaxBgFreeze:"on",
+    			parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+    									
+    			keyboardNavigation:"off",
+    			
+    			navigationHAlign:"center",
+    			navigationVAlign:"bottom",
+    			navigationHOffset:0,
+    			navigationVOffset:20,
+
+    			soloArrowLeftHalign:"left",
+    			soloArrowLeftValign:"center",
+    			soloArrowLeftHOffset:20,
+    			soloArrowLeftVOffset:0,
+
+    			soloArrowRightHalign:"right",
+    			soloArrowRightValign:"center",
+    			soloArrowRightHOffset:20,
+    			soloArrowRightVOffset:0,
+    					
+    			shadow:0,
+    			fullWidth:"on",
+    			fullScreen:"off",
+
+    			spinner:"spinner4",
+    			
+    			stopLoop:"off",
+    			stopAfterLoops:-1,
+    			stopAtSlide:-1,
+
+    			shuffle:"off",
+    			
+    			autoHeight:"off",						
+    			forceFullWidth:"off",						
+    									
+    			hideTimerBar: "on",					
+    									
+    			hideThumbsOnMobile:"off",
+    			hideNavDelayOnMobile:1500,						
+    			hideBulletsOnMobile:"off",
+    			hideArrowsOnMobile:"off",
+    			hideThumbsUnderResolution:0,
+    			
+    			hideSliderAtLimit:0,
+    			hideCaptionAtLimit:0,
+    			hideAllCaptionAtLilmit:0,
+    			startWithSlide:0,
+    			videoJsPath:"rs-plugin/videojs/",
+    			fullScreenOffsetContainer: ""	
+    		});
+    		//END SLIDE  		
+
+    		//START PARALLAX SECTIONS
+    		$('#nicdark_parallax_big_image').parallax("50%", 0.3);
+    		$('#nicdark_parallax_2_btns').parallax("50%", 0.3);
+    		$('#nicdark_parallax_countdown').parallax("50%", 0.3);
+    		$('#nicdark_parallax_counter').parallax("50%", 0.3);
+    		//END PARALLAX SECTIONS
+
+    	});
+    </script>
+    <!--custom js-->
+    <script type="text/javascript">
+        $('#canvasRain').css({
+            "height":  $(".slides").innerHeight,
+            "width":  $(".slides").innerWidth
+        });
+
+        $("#whiteboard").on("click", function(){
+            $("#whiteboard").hide();
+            $("#showslide").show();
+            $(".slide").hide();
+            $(".slides").show();
+            $(".slides").addClass("fadeInRight");
+        });
+
+        $("#showslide").on("click", function(){
+            $("#showslide").hide();
+            $("#whiteboard").show();
+            $(".slides").hide();
+            $(".slide").show();
+            $(".slide").addClass("fadeInRight");
+        });
+    </script>
+
+    <script type="text/javascript">
+        var socket = io.connect('http://192.168.10.110:3001');
+        var sessionId = 10;
+        $(".pub").on("click", function(){
+            socket.emit("ask", {name: "dá", a: "1", b: "2", c: "3", d: "4"});
+        });
+        $(".sub").on("click", function(){
+            socket.emit("ans", {name: "4"});
+        });
+
+        socket.on( 'ask', function(data) {
+
+          if(localStorage.getItem('status') != '0'){
+            console.log(data);
+            $("#sclass").append("<div class='nicdark_toogle'><h5 class='nicdark_toogle_header white nicdark_bg_blue big nicdark_radius nicdark_shadow'>1 + 1 = ?</h5><div class='nicdark_toogle_content nicdark_bg_grey nicdark_radius_bottom nicdark_shadow'><div class='nicdark_margin100'><a class='sub nicdark_zoom nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white'>A: 1</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_blue medium nicdark_shadow nicdark_radius white'>B: 2</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_orange medium nicdark_shadow nicdark_radius white'>C: 3</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white'>D: 4</a>&nbsp;&nbsp;&nbsp;&nbsp;</div></div></div>");
+          }
+          
+        })
+
+
+        socket.on( 'ans', function(data) {
+
+          if(localStorage.getItem('status') == '0'){
+            console.log(data);
+          }
+          
+        })
+    </script>
+
+    <script type="text/paperscript" canvas="myCanvas">
+        function randomColor() {
+  
+            return {
+                hue: Math.random() * 360,
+                saturation: 0.8,
+                brightness: 0.8,
+                alpha: 0.5
+            };
+        }
+
+        var sessionId = 10;
+        paths = {};
+
+        // The user started a path
+        function onMouseDown(event) {
+  
+            // Create the new path
+            color = randomColor();
+
+            startPath( event.point, color, sessionId );
+
+            // Inform the backend
+            emit("startPath", {point: event.point, color: color}, sessionId);
+
+        }
+
+        function onMouseDrag(event) {
+
+            var step        = event.delta / 2;
+            step.angle     += 90; 
+            var top         = event.middlePoint + step;
+            var bottom      = event.middlePoint - step;
+
+            continuePath( top, bottom, sessionId );
+
+            // Inform the backend
+            emit("continuePath", {top: top, bottom: bottom}, sessionId);
+
+        }
+
+        function onMouseUp(event) {
+
+            endPath(event.point, sessionId);
+
+            // Inform the backend
+            emit("endPath", {point: event.point}, sessionId);
+
+        }
+
+
+        // -----------------
+        // Drawing functions
+        // Use to draw multiple users paths
+        // -----------------
+
+        function startPath( point, color, sessionId ) {
+
+            paths[sessionId] = new Path();
+            paths[sessionId].fillColor = color;
+            paths[sessionId].add(point);
+
+        }
+
+        function continuePath(top, bottom, sessionId) {
+
+            var path    = paths[sessionId];
+          
+            path.add(top);
+            path.insert(0, bottom);
+        }
+
+        function endPath(point, sessionId) {
+
+            var path = paths[sessionId];
+
+            path.add(point);
+            path.closed = true;
+            path.smooth();
+
+            delete paths[sessionId]
+
+        }
+
+        // -----------------
+        // Emit
+        // Use to inform the server of user events
+        // -----------------
+
+
+        function emit(eventName, data) {
+
+            io.emit(eventName, data, sessionId);
+
+        }
+
+
+        // -----------------
+        // On
+        // Draw other users paths
+        // -----------------
+
+
+        io.on( 'startPath', function( data, sessionId ) {
+          
+          startPath(data.point, data.color, sessionId);
+          
+        })
+
+
+        io.on( 'continuePath', function( data, sessionId ) {
+
+          continuePath(data.top, data.bottom, sessionId);
+          view.draw();
+          
+        })
+
+
+        io.on( 'endPath', function( data, sessionId ) {
+
+          endPath(data.point, sessionId);
+          view.draw();
+        })
+    </script>
+
+   

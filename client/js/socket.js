@@ -1,5 +1,5 @@
 // Connect to the nodeJs Server
-io = io.connect('http://192.168.137.86:3001');
+io = io.connect('http://192.168.10.110:3001');
 
 // (1): Send a ping event with 
 // some data to the server

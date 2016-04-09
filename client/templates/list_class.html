@@ -1,0 +1,49 @@
+<!-- lớp học -->
+<section class="nicdark_section">
+
+    <div class="nicdark_container nicdark_clearfix">
+
+        <div class="nicdark_space20"></div>
+
+
+        <div class="grid grid_12">
+            <h1 class="subtitle greydark">Lớp học</h1>
+            <div class="nicdark_space20"></div>
+            <h3 class="subtitle grey">Danh sách các lớp học nổi bật</h3>
+            <div class="nicdark_space20"></div>
+            <div class="nicdark_divider left big"><span class="nicdark_bg_green nicdark_radius"></span></div>
+            <div class="nicdark_space10"></div>
+        </div>
+
+
+        <div class="grid grid_3" ng-repeat="class in listClass">
+                    
+            <div class="nicdark_archive1 nicdark_bg_yellow nicdark_radius nicdark_shadow">
+
+                <img alt=""  src="img/blog/img7.jpg">
+                
+                <div class="nicdark_margin20">
+                    <h4 class="white">{{class.name}}</h4>
+                    <h3 class="subtitle grey">{{class.teacher_name}}</h3>
+                    <a title="Lịch dạy" data-toggle="modal" data-target="#modal_time" class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"><i class="icon-clock"></i></a>
+                    <a title="Thông tin giáo viên" data-toggle="modal" data-target="#modal_infor" class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"><i class="icon-user-outline"></i></a>
+                    <a title="CURRICULUM" href="single-teacher.html" class="nicdark_rotate nicdark_tooltip nicdark_btn_icon small nicdark_bg_orangedark nicdark_radius_circle white"><i class="icon-download-outline"></i></a>
+                    <div class="nicdark_space20"></div>
+                    <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
+                    <div class="nicdark_space20"></div>
+                    <p class="white">{{class.information}}</p>
+                    <div class="nicdark_space20"></div>
+                    <a href="#/{{class.id}}/" class="nicdark_press nicdark_btn nicdark_bg_bluedark white nicdark_radius nicdark_shadow medium">Tham gia</a>                     
+                </div>
+
+                <i class="icon-picture-outline nicdark_iconbg right medium yellow"></i>
+
+            </div>
+
+        </div>
+
+        <div class="nicdark_space50"></div>
+   </div>
+            
+</section>
+<!-- hết lớp học --> 

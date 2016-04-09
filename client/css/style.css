@@ -1,0 +1,61 @@
+ul { list-style-type: none; }
+canvas {
+	background: #fff;
+	margin: 0px auto;
+	display: block;
+}
+.slide{
+	height: 500px;
+	margin-top: 70px !important;
+	background: red;
+}
+.slides{
+	height: 500px;
+	margin-top: 70px !important;
+	background: black;
+}
+.tool-bar{
+	height: 500px;
+	margin-top: 70px !important;
+
+}
+.tool-bar ul{
+	width: 100%;
+    padding: 0px;
+}
+.tool-bar ul li{
+	cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.lecture{
+	background: #fff;
+    border: 1px solid #e6e6e6;
+    border-bottom: 5px solid #d4c0b0;
+    margin: 20px 0 20px 0;
+}
+.badge_lecture{
+	display: inline-block;
+    margin-top: 10px;
+    margin-left: -2px;
+    background-color: #b89173;
+    border-right: 4px solid #d4c0b0;
+    padding: 0 20px 0 45px;
+    color: #fff;
+    font-family: 'OpenSans-Bold',Arial,sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    line-height: 34px;
+}
+.minigame{
+	list-style-type: none;
+}
+/*.minigame li{
+	float: left;
+}*/
+.minigame li div{
+	padding: 25px !important;
+}
