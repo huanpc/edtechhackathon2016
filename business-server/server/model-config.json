@@ -14,27 +14,24 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "kidline",
+    "public": true
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "kidline",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "kidline",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "kidline",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
-    "public": false
-  },
-  "user": {
     "dataSource": "kidline",
-    "public": true
+    "public": false
   },
   "class": {
     "dataSource": "kidline",
@@ -65,6 +62,10 @@
     "public": true
   },
   "assessments": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "user": {
     "dataSource": "kidline",
     "public": true
   }
