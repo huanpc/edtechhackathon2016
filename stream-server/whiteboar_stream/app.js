@@ -87,4 +87,35 @@ io.sockets.on('connection', function (socket) {
 
 });
 
+// Quiz channel
+// teacher ask question channel
+var askSocket = io
+  .of('/ask')
+  .on('connection', function (socket) {
+    socket.emit('a message', {
+        that: 'only'
+      , '/ask': 'will get'
+    });
+    askSocket.emit('a message', {
+        everyone: 'in'
+      , '/ask': 'will get'
+    });
+  });
+
+// student answer question
+var answerSocket = io
+  .of('/answer')
+  .on('connection', function (socket) {
+    socket.on('teacher', function(data){
+      socket.emit('question', {
+          that: 'only'
+        , '/ask': 'will get'
+      });  
+    });    
+    answerSocket.emit('a message', {
+        everyone: 'in'
+      , '/ask': 'will get'
+    });
+  });
+
 module.exports = app;
