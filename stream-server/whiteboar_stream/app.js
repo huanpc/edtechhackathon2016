@@ -92,30 +92,28 @@ io.sockets.on('connection', function (socket) {
 var askSocket = io
   .of('/ask')
   .on('connection', function (socket) {
-    socket.emit('a message', {
-        that: 'only'
-      , '/ask': 'will get'
-    });
-    askSocket.emit('a message', {
-        everyone: 'in'
-      , '/ask': 'will get'
-    });
+    socket.on('teacher', function(data){
+      socket.emit('question', data);  
+    });        
   });
 
+
+// teacher receive answer
+var teacherSocket = io
+  .of('/teacher')
+  .on('connection', function (socket) {    
+    // answerSocket.emit('a message', {
+    //     everyone: 'in'
+    //   , '/ask': 'will get'
+    // });
+});
 // student answer question
 var answerSocket = io
-  .of('/answer')
-  .on('connection', function (socket) {
-    socket.on('teacher', function(data){
-      socket.emit('question', {
-          that: 'only'
-        , '/ask': 'will get'
-      });  
+  .of('/student_answer')
+  .on('connection', function (socket) {    
+    socket.on('answer',function(data){
+      teacherSocket.emit('answer', data);  
     });    
-    answerSocket.emit('a message', {
-        everyone: 'in'
-      , '/ask': 'will get'
-    });
   });
 
 module.exports = app;
