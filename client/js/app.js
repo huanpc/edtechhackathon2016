@@ -6,7 +6,7 @@ angular.module('starter', ['ngRoute','lbServices','starter.controllers', 'starte
   LoopBackResourceProvider.setAuthHeader('X-Access-Token');
 
   // Change the URL where to access the LoopBack REST API server
-  LoopBackResourceProvider.setUrlBase('http://192.168.10.113:3000/api');
+  LoopBackResourceProvider.setUrlBase('http://192.168.137.195:3000/api');
 
   $routeProvider
     .when('/',{

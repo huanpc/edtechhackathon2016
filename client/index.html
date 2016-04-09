@@ -130,7 +130,96 @@
         <div class="nicdark_space3 nicdark_bg_gradient"></div>
 
         <!--footer-->
-    
+        <section class="nicdark_section nicdark_bg_greydark">
+
+            <!--start nicdark_container-->
+            <div class="nicdark_container nicdark_clearfix">
+
+                <div class="nicdark_space30"></div>
+
+                <div class="grid grid_6 nomargin percentage">
+
+                    <div class="nicdark_space20"></div>
+
+                    <div class="nicdark_margin10">
+                        <h4 class="white">Baka-learning</h4>
+                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
+                        <div class="nicdark_space20"></div>
+                        <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
+                        <div class="nicdark_space20"></div>
+                        
+                        <div class="nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
+                            <div class="nicdark_margin10">
+                                <a href="#" class="nicdark_facebook nicdark_press right nicdark_btn_icon small nicdark_radius white"><i class="icon-facebook-1"></i></a>
+                            </div>
+                            <div class="nicdark_margin10">
+                                <a href="#" class="nicdark_press right nicdark_btn_icon nicdark_bg_red nicdark_shadow small nicdark_radius white"><i class="icon-gplus"></i></a>
+                            </div>
+                            <div class="nicdark_margin10">
+                                <a href="#" class="nicdark_press right nicdark_btn_icon nicdark_bg_blue nicdark_shadow small nicdark_radius white"><i class="icon-twitter-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid_6 nomargin percentage">
+
+                    <div class="nicdark_space20"></div>
+
+                    <div class="nicdark_margin10">
+                        <h4 class="white">Góp ý</h4>
+                        <div class="nicdark_space20"></div>
+                        <div class="nicdark_divider left small"><span class="nicdark_bg_white nicdark_radius"></span></div>
+                        <div class="nicdark_space20"></div>
+                        
+
+                        <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow white small subtitle" type="text" value="" placeholder="EMAIL">
+                        <div class="nicdark_space20"></div>
+                        <textarea rows="3" class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow white small subtitle" placeholder="Góp ý"></textarea>
+                        <div class="nicdark_space20"></div>
+                        <!--<input class="nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white nicdark_press" type="submit" value="SEND">-->
+                        <a href="submit-message.html" class="nicdark_mpopup_ajax nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white nicdark_press">Gửi ý kiến</a>
+                    </div>
+                </div> 
+
+                <div class="nicdark_space50"></div> 
+
+            </div>
+            <!--end nicdark_container-->
+                    
+        </section>
+        <!--hết footer-->
+
+    </div>
+
+    <div ng-include="'templates/pop_time.htm'"></div>
+    <div ng-include="'templates/pop_infor.htm'"></div>
+
+    <div id="modal_login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow">
+                <div class="nicdark_textevidence nicdark_bg_yellow nicdark_radius_top">
+                    <h4 class="white nicdark_margin20">Đăng nhập</h4>
+                    <i class="icon-search-1 nicdark_iconbg right medium yellow"></i>
+                </div>
+                <div class="nicdark_margin20" style="text-align: center;">
+                    <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey small subtitle" type="text" value="" size="200" placeholder="Tên tài khoản" style="width: 100%;" ng-model="username">
+                    <div class="nicdark_space20"></div>
+                    <input class="nicdark_bg_grey2 nicdark_radius nicdark_shadow grey small subtitle" type="text" value="" size="200" placeholder="Mật khẩu" style="width: 100%;" ng-model="password">
+                    <div class="nicdark_space20"></div>
+                    <input ng-click="createUser()" class="nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white" type="submit" value="ĐĂNG NHẬP">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--main-->
 
     <!--plugins-->
     <script src="js/plugins/revslider/jquery.themepunch.tools.min.js"></script> <!--revslider-->

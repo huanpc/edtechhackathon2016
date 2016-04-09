@@ -69,24 +69,24 @@
     <div class="nicdark_container nicdark_clearfix">
         <h1 class="subtitle greydark"><i class="icon-help-circled"></i>Câu hỏi</h1>
         <div class="grid grid_11 nomargin percentage" id="sclass">
-            <div class="">
+            <div ng-repeat="question in listQuestions">
                 <h5 class="nicdark_toogle_header white nicdark_bg_blue big nicdark_radius nicdark_shadow">
-                    1 + 1 = ?
+                    {{question.name}}
                     <a style="float: right;padding: 0px;" class="pub nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey"><i class="icon-cog-2 "></i></a>
                     <a style="float: right;padding: 0px;" data-toggle="modal" data-target="#modal_result" class="nicdark_btn_icon nicdark_bg_blue medium nicdark_radius_circle grey"><i class="icon-cog-2 "></i></a>
                 </h5>
                 <div class="nicdark_toogle_content nicdark_bg_grey nicdark_radius_bottom nicdark_shadow">
                     <div class="nicdark_margin100">
-                        <a class="sub nicdark_zoom nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white">A: 1</a>
+                        <a class="sub nicdark_zoom nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white">A: {{question.a}}</a>
                     </div>
                     <div class="sub nicdark_margin100">
-                        <a class="nicdark_zoom nicdark_btn nicdark_bg_blue medium nicdark_shadow nicdark_radius white">B: 2</a>
+                        <a class="nicdark_zoom nicdark_btn nicdark_bg_blue medium nicdark_shadow nicdark_radius white">B: {{question.b}}</a>
                     </div>
                     <div class="sub nicdark_margin100">
-                        <a class="nicdark_zoom nicdark_btn nicdark_bg_orange medium nicdark_shadow nicdark_radius white">C: 3</a>
+                        <a class="nicdark_zoom nicdark_btn nicdark_bg_orange medium nicdark_shadow nicdark_radius white">C: {{question.c}}</a>
                     </div>
                     <div class="sub nicdark_margin100">
-                        <a class="nicdark_zoom nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white">D: 4</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="nicdark_zoom nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white">D: {{question.d}}</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
             </div>
@@ -221,7 +221,6 @@
     <script type="text/javascript">
     	jQuery(document).ready(function() {
 
-
     		//START SLIDE
     		jQuery('.nicdark_slide1').show().revolution({
     			dottedOverlay:"none",
@@ -310,6 +309,7 @@
     </script>
     <!--custom js-->
     <script type="text/javascript">
+
         $('#canvasRain').css({
             "height":  $(".slides").innerHeight,
             "width":  $(".slides").innerWidth
@@ -333,7 +333,7 @@
     </script>
 
     <script type="text/javascript">
-        var socket = io.connect('http://192.168.10.110:3001');
+        var socket = io.connect('http://localhost:3001');
         var sessionId = 10;
         $(".pub").on("click", function(){
             socket.emit("ask", {name: "dá", a: "1", b: "2", c: "3", d: "4"});
@@ -346,7 +346,7 @@
 
           if(localStorage.getItem('status') != '0'){
             console.log(data);
-            $("#sclass").append("<div class='nicdark_toogle'><h5 class='nicdark_toogle_header white nicdark_bg_blue big nicdark_radius nicdark_shadow'>1 + 1 = ?</h5><div class='nicdark_toogle_content nicdark_bg_grey nicdark_radius_bottom nicdark_shadow'><div class='nicdark_margin100'><a class='sub nicdark_zoom nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white'>A: 1</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_blue medium nicdark_shadow nicdark_radius white'>B: 2</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_orange medium nicdark_shadow nicdark_radius white'>C: 3</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white'>D: 4</a>&nbsp;&nbsp;&nbsp;&nbsp;</div></div></div>");
+            $("#sclass").append("<div class=''><h5 class='nicdark_toogle_header white nicdark_bg_blue big nicdark_radius nicdark_shadow'>1 + 1 = ?</h5><div class='nicdark_toogle_content nicdark_bg_grey nicdark_radius_bottom nicdark_shadow'><div class='nicdark_margin100'><a class='sub nicdark_zoom nicdark_btn nicdark_bg_red medium nicdark_shadow nicdark_radius white'>A: 1</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_blue medium nicdark_shadow nicdark_radius white'>B: 2</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_orange medium nicdark_shadow nicdark_radius white'>C: 3</a></div><div class='sub nicdark_margin100'><a class='nicdark_zoom nicdark_btn nicdark_bg_yellow medium nicdark_shadow nicdark_radius white'>D: 4</a>&nbsp;&nbsp;&nbsp;&nbsp;</div></div></div>");
           }
           
         })
@@ -466,13 +466,13 @@
 
         io.on( 'startPath', function( data, sessionId ) {
           
+          console.log(data);
           startPath(data.point, data.color, sessionId);
-          
         })
 
 
         io.on( 'continuePath', function( data, sessionId ) {
-
+            console.log(data);
           continuePath(data.top, data.bottom, sessionId);
           view.draw();
           

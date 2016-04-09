@@ -20,6 +20,86 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('HomeCtrl', function($scope) {
+  $("#slize").show();
+
+
+})
+
+.controller('ClassesCtrl', function($scope, Class) {
+  $("#slize").show();
+
+  function getTodos() {
+    Class
+      .find()
+      .$promise
+      .then(function(results) {
+        console.log(results);
+        $scope.listClass = results;
+
+        console.log($scope.listClass);
+      });
+  }
+  getTodos();
+
+})
+
+.controller('ClassCtrl', function($scope, $route, Questions) {
+  $("#slize").hide();
+  $scope.class_id = $route.current.params.class_id;
+
+  if (localStorage.getItem('status' != 0)) {
+    $scope.status = true;
+  }else{
+    $scope.status = false;
+  }
+
+  function getTodos() {
+    Questions
+    .find()
+    .$promise
+    .then(function(results) {
+      console.log(results);
+      $scope.listQuestions = results;
+
+      console.log($scope.listQuestions);
+    });
+
+  }
+  getTodos();
+})
+
+.controller('LectureCtrl', function($scope, $route, Resources) {
+  $("#slize").show();
+
+  function getTodos() {
+    Resources
+      .find()
+      .$promise
+      .then(function(results) {
+        console.log(results);
+        $scope.listResources = results;
+
+        console.log($scope.listResources);
+      });
+
+      Questions
+      .find()
+      .$promise
+      .then(function(results) {
+        console.log(results);
+        $scope.listQuestions = results;
+
+        console.log($scope.listQuestions);
+      });
+
+  }
+  getTodos();  
+})
+
+.controller('EventsCtrl', function($scope) {
+  $("#slize").show();
+})
 
 .controller('HomeWorkCtrl', function($scope) {
   $("#slize").hide();
