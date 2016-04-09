@@ -85,35 +85,15 @@ io.sockets.on('connection', function (socket) {
 
  });  
 
-});
-
 // Quiz channel
 // teacher ask question channel
-var askSocket = io
-  .of('/ask')
-  .on('connection', function (socket) {
-    socket.on('teacher', function(data){
-      socket.emit('question', data);  
-    });        
-  });
-
-
-// teacher receive answer
-var teacherSocket = io
-  .of('/teacher')
-  .on('connection', function (socket) {    
-    // answerSocket.emit('a message', {
-    //     everyone: 'in'
-    //   , '/ask': 'will get'
-    // });
+  socket.on('ask',function(data){
+    socket.broadcast.emit('ask', data);
+  });    
+  socket.on('ans',function(data){
+    socket.broadcast.emit('ans',data);
+  });    
 });
-// student answer question
-var answerSocket = io
-  .of('/student_answer')
-  .on('connection', function (socket) {    
-    socket.on('answer',function(data){
-      teacherSocket.emit('answer', data);  
-    });    
-  });
+
 
 module.exports = app;
