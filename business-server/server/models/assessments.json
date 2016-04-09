@@ -1,0 +1,26 @@
+{
+  "name": "assessments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "submission_id": {
+      "type": "number"
+    },
+    "feedback": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "number"
+    },
+    "created_date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

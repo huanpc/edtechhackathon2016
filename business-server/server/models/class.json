@@ -1,0 +1,32 @@
+{
+  "name": "class",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "information": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    },
+    "created_date": {
+      "type": "date"
+    },
+    "timeline_id": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

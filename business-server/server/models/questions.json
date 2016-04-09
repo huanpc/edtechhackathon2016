@@ -1,0 +1,44 @@
+{
+  "name": "questions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "parent_id": {
+      "type": "number"
+    },
+    "type_id": {
+      "type": "number"
+    },
+    "created_date": {
+      "type": "date"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "max_submission": {
+      "type": "number"
+    },
+    "max_duration": {
+      "type": "number"
+    },
+    "weight": {
+      "type": "number"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
