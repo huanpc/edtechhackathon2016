@@ -9,9 +9,12 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-//require socketIO
-var server = http.createServer(app).listen('3001');
+
+// require socketIO
+// listen on port 3001
+var server = require('http').Server(app);
 var io = require('socket.io').listen(server);
+server.listen(3001);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -59,5 +62,29 @@ app.use(function(err, req, res, next) {
   });
 });
 
+io.sockets.on('connection', function (socket) {
+
+ // A User starts a path
+ socket.on( 'startPath', function( data, sessionId ) {
+
+   socket.broadcast.emit( 'startPath', data, sessionId );
+
+ });
+
+ // A User continues a path
+ socket.on( 'continuePath', function( data, sessionId ) {
+
+   socket.broadcast.emit( 'continuePath', data, sessionId );
+
+ });
+
+ // A user ends a path
+ socket.on( 'endPath', function( data, sessionId ) {
+
+   socket.broadcast.emit( 'endPath', data, sessionId );
+
+ });  
+
+});
 
 module.exports = app;
