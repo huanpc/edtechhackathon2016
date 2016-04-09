@@ -31,5 +31,41 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "user": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "class": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "timeline": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "resources": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "questions": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "student_class": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "submissions": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "resource_type": {
+    "dataSource": "kidline",
+    "public": true
+  },
+  "assessments": {
+    "dataSource": "kidline",
+    "public": true
   }
 }

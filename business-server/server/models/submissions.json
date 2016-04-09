@@ -1,0 +1,29 @@
+{
+  "name": "submissions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "user_id": {
+      "type": "number"
+    },
+    "question_id": {
+      "type": "number"
+    },
+    "created_date": {
+      "type": "date"
+    },
+    "attempt_number": {
+      "type": "number"
+    },
+    "answer": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

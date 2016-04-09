@@ -1,0 +1,29 @@
+{
+  "name": "resources",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type_id": {
+      "type": "number"
+    },
+    "parent_id": {
+      "type": "number"
+    },
+    "created_date": {
+      "type": "date"
+    },
+    "content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
