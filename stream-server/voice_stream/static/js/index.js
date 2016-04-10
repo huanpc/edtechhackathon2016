@@ -13,7 +13,8 @@
  *
  */
 
-var ws = new WebSocket('wss://' + location.host + '/one2many');
+var ws = new WebSocket('ws://' + location.host + '/one2many');
+console.log('ws://' + location.host + '/one2many');
 var video;
 var webRtcPeer;
 var isPresenter = false;
@@ -136,7 +137,7 @@ function viewer() {
 }
 
 function onOfferViewer(error, offerSdp) {
-	if (error) return onError(error)
+	if (error) return onError(error);
 
 	var message = {
 		id : 'viewer',

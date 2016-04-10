@@ -21,6 +21,7 @@ var ws = require('ws');
 var kurento = require('kurento-client');
 var fs    = require('fs');
 var https = require('https');
+var http = require('http');
 
 var argv = minimist(process.argv.slice(2), {
     default: {
@@ -52,11 +53,11 @@ var noPresenterMessage = 'No active presenter. Try again later...';
  */
 var asUrl = url.parse(argv.as_uri);
 var port = asUrl.port;
-var server = https.createServer(options, app).listen(port, function() {
-    console.log('Kurento Tutorial started');
-    console.log('Open ' + url.format(asUrl) + ' with a WebRTC capable browser');
-});
-
+// var server = https.createServer(options, app).listen(port, function() {
+//     console.log('Kurento Tutorial started');
+//     console.log('Open ' + url.format(asUrl) + ' with a WebRTC capable browser');
+// });
+var server  = http.Server(app).listen(8443);
 var wss = new ws.Server({
     server : server,
     path : '/one2many'
