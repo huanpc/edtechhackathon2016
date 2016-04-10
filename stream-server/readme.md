@@ -6,6 +6,7 @@
 - expressjs 
 - nodejs 
 - kurento WebRTC: https://github.com/Kurento/
-2. Setup and run:
+
+2. Setup and run
 - npm install
 - npm start
